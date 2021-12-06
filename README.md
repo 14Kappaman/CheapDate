@@ -1,6 +1,7 @@
 # Introducing: CheapDate
 >"Not Cute. But Cheap."
 
+<!-- Insert Link To Deployed Application HERE -->
 ## Welcome Thirsty Thrifty Singles, 
 
 CheapDate is the premier dating application for penny-pinching lovers. CheapDate is an innovative and revolutionary social media & dating application. Designed for the budget minded bachelor or bachelorette.  Generating the most fruitful, first-date ideas for even the most frugal lovers.
@@ -26,3 +27,42 @@ SO THAT I can have a record of my saved ideas and for matching purposes.
 
 I WANT to be able to sort my CheapDateIdeas by Star Ranking and Success Rate.
 SO THAT users can view their best performing CheapDate Ideas._ 
+
+# Team Members & Role Assignment
+
+- Adam Kovacevich: Project Lead. ALL Teams
+- John Quintanilla: API Lead, All Teams
+- Aubrey Cook: HTML, CSS, Javascript Teams
+- Alondra Ortega: HTML, CSS, Javascript Teams
+
+# Teams
+- HTML
+- CSS + Framework
+- Javascript
+- API
+>Team Leads are responsible for organizing & managing respective features to the CheapDate App.
+
+## CheapDate Technologies Stack
+- HTML
+- CSS
+- Bulma CSS Framework
+- Javascript + JQuery
+- Yelp! or TripAdvisor API
+- Fandango or NewYorkTimes API
+- Google Maps API (?)
+
+## Screenshots & Demo
+<!-- insert Screenshots here -->
+>Insert Screenshots from Application HERE.
+## Directions for Future Development
+<!-- insert Content here -->
+> Insert Future Development Description & Feature List HERE. 
+
+## Credits
+<!-- insert Credits & Links here -->
+>Insert Credits with Links Here (Resources, APIs, etc.)
+
+## Links to Deployed App & GitHub Repo
+<!-- insert links here -->
+- DEPLOYED: [https://kovaceva11.github.io/CheapDate/](www.github.com)
+- REPOSITORY: [https://github.com/Kovaceva11/CheapDate](www.github.com)
