@@ -66,3 +66,10 @@ SO THAT users can view their best performing CheapDate Ideas._
 <!-- insert links here -->
 - DEPLOYED: [https://kovaceva11.github.io/CheapDate/](www.github.com)
 - REPOSITORY: [https://github.com/Kovaceva11/CheapDate](www.github.com)
+
+Api Keys
+Yelp: Client ID
+dEyl7xSBkAUmE4oa8rQH-A
+
+API Key
+68bbHwsCWL4OAYGtkSOWSf2JFp7C2zbjnUxztytfSKJmA2cddY0ahKSeO6agzuI9Bf-nC3XII8n1qIPAZQHdrjzu0E4xiPcvWUINsr7NZ5xZgPiBiSbc6HfMUwmwYXYx

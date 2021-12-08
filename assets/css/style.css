@@ -128,22 +128,3 @@ body {
 
 .form__link:hover {
     text-decoration: underline;
-}
-
-/* profile picture */
-.profile-picture {
-  
-}
-
-.checked {
-    color: orange;
-  }
-
-.success {
-    color:#4bb544;
-}
-
-.failure {
-    color:#cc3333;
-} 
-
