@@ -69,10 +69,19 @@ SO THAT users can view their best performing CheapDate Ideas._
 
 
 ## API Information:
-Api Keys
-Yelp: Client ID
-dEyl7xSBkAUmE4oa8rQH-A
+I registered for an api key at movieglu since fandango did not allow people to use their api. This seems easier
+API Endpoint
+https://api-gate2.movieglu.com/
 
-API Key
-68bbHwsCWL4OAYGtkSOWSf2JFp7C2zbjnUxztytfSKJmA2cddY0ahKSeO6agzuI9Bf-nC3XII8n1qIPAZQHdrjzu0E4xiPcvWUINsr7NZ5xZgPiBiSbc6HfMUwmwYXYx
+Headers
+The fields below must be passed in the HTTP header:
+client:	CHEA_0
+x-api-key:	NlDOeoEgK946kGiNMjKqM48xopku2zY37rp0zPWn
+authorization:	Basic Q0hFQV8wOkRmWmc2a0dHbDA3YQ==
+territory:	US
+api-version:	v200
+geolocation:	Your location in format lat;lng, e.g. 52.47;-1.93
+device-datetime:	yyyy-mm-ddThh:mm:ss.sssZ (ISO 8601 format, e.g. 2018-09-14T08:30:17.360Z)
+
+
 
