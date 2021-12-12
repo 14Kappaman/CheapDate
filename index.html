@@ -36,7 +36,7 @@
     />
     
   </head>
-  <body>
+  <>
     <section class="hero is-success is-medium is-bold">
       <div class="hero-head">
         <nav class="navbar">
@@ -108,6 +108,31 @@
                   Add bio, location,etc.
                 </p>
                 <p><a href="#">Learn more</a></p>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" id="city" type="text" placeholder="Enter City">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" id="distance" type="number" placeholder="Distance in Meters">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-car"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-success" id="success">
+                    Find Cheap Date
+                  </button>
+                </p>
               </div>
             </div>
           </div>
@@ -186,7 +211,7 @@
                             </div>
                         </div>                           
                         <div class="media-right">
-                            <span class="fa fa-star checked fa-2x"></span>
+                            <button class="fa fa-star checked fa-2x"></button>
                             <span class="fa fa-star fa-2x"></span>
                             <span class="fa fa-star fa-2x"></span>
                             <span class="fa fa-star fa-2x"></span>
@@ -218,31 +243,35 @@
 
       <div class="sandbox">
         <div class="tile is-ancestor">
-          <div class="tile is-parent is-shady">
+          <div class="tile is-parent is-shady" id="test">
             <article class="tile is-child notification is-white">
-              <p class="title">Generate Movie  & Restaurant Recommendation Here.</p>
-              <p class="subtitle">Add Details such as Cover Art, Restaurant Image, Price Details, Etc. Reference APIs.</p>
+              <p class="title"><span id="randomRestaurant"></span></p>
+              <p class="subtitle"><span id="randomRestaurantPrice"></span></p>              
+              <div class="image is-128x128" id="restaurantPhoto"></div>
             </article>            
-          </div>         
-         
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-shady" id="test">
+            <article class="tile is-child notification is-white">
+              <p class="title"><span id="randomRestaurant2"></span></p>
+              <p class="subtitle"><span id="randomRestaurantPrice2"></span></p>              
+              <div class="image is-128x128" id="restaurantPhoto2"></div>
+            </article>            
+          </div> 
         </div>
         <div class="tile is-ancestor">
             <div class="tile is-parent is-shady">
               <article class="tile is-child notification is-white">
-                <p class="title">Generate Movie  & Restaurant Recommendation Here.</p>
-                <p class="subtitle">Add Details such as Cover Art, Restaurant Image, Price Details, Etc. Reference APIs.</p>
-              </article>            
-            </div>
-        </div>
-        <div class="tile is-ancestor">
-            <div class="tile is-parent is-shady">
-              <article class="tile is-child notification is-white">
-                <p class="title">Generate Movie  & Restaurant Recommendation Here.</p>
-                <p class="subtitle">Add Details such as Cover Art, Restaurant Image, Price Details, Etc. Reference APIs.</p>
+                <p class="title"><span id="randomRestaurant3"></span></p>
+                <p class="subtitle"><span id="randomRestaurantPrice3"></span></p>              
+                <div class="image is-128x128" id="restaurantPhoto3"></div>
               </article>            
             </div>
         </div>
       </div>  
-    </section>   
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
