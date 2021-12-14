@@ -141,3 +141,6 @@ body {
 .failure {
   color: #cc3333;
 }
+.image {
+  overflow: hidden;
+}

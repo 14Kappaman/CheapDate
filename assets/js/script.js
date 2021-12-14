@@ -61,7 +61,8 @@
 				var img= $('<img>');
 				img.attr('src', result.businesses[index].image_url)
 				img.appendTo('#restaurantPhoto')
-				
+				$("#restaurantrating").text("").append(renderRatingView(result.businesses[index].rating))
+
 				// Adds Restaurant Name
 				$("#randomRestaurant2").text(result.businesses[index2].name)
 				// Adds Restaurant Price Rating
@@ -71,6 +72,8 @@
 				var img= $('<img>');
 				img.attr('src', result.businesses[index2].image_url)
 				img.appendTo('#restaurantPhoto2')
+				$("#restaurantrating2").text("").append(renderRatingView(result.businesses[index2].rating))
+
 
 				// Adds Restaurant Name
 				$("#randomRestaurant3").text(result.businesses[index3].name)
@@ -81,6 +84,8 @@
 				var img= $('<img>');
 				img.attr('src', result.businesses[index3].image_url)
 				img.appendTo('#restaurantPhoto3')
+				$("#restaurantrating3").text("").append(renderRatingView(result.businesses[index3].rating))
+
 			},			
 		});
 	});
@@ -146,3 +151,42 @@ $("#distance").on("focusout", () => {
 		$("#distance").val(minDistance)
 	}
 })
+function renderRatingView(rating){
+	var image=$("<img>")
+	switch (rating){
+		case 0:
+			image.attr("src", "assets/images/regular/regular_0.png")
+			break;
+		case 1:
+			image.attr("src", "assets/images/regular/regular_1.png")
+			break;
+		case 1.5:
+			image.attr("src", "assets/images/regular/regular_1_half.png")
+			break;
+		case 2:
+			image.attr("src", "assets/images/regular/regular_2.png")
+			break;
+		case 2.5:
+			image.attr("src", "assets/images/regular/regular_2_half.png")
+			break;
+		case 3:
+			image.attr("src", "assets/images/regular/regular_3.png")
+			break;
+		case 3.5:
+			image.attr("src", "assets/images/regular/regular_3_half.png")
+			break;
+		case 4:
+			image.attr("src", "assets/images/regular/regular_4.png")
+			break;
+		case 4.5:
+			image.attr("src", "assets/images/regular/regular_4_half.png")
+			break;
+		case 5:
+			image.attr("src", "assets/images/regular/regular_5.png")
+			break;
+		default:
+			throw new Error("can not display invalid rating")
+
+	}
+	return image;
+}
