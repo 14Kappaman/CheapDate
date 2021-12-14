@@ -27,7 +27,7 @@
 		// TODO:BUG: When selecting "Find Cheap Date" Button repeatedly using the same CITY and DISTANCE. It loads photos multiple times.
 
 	
-		var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
+		var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
 		var apiKey = "ylTgS_8g2vr6yKMeND8qD6hLtZ5IcznWaYieqPh1NwhXb1WkHQzBwRzcBxmmpKxtJV48JHKfBQrme82TGo--56mAy_HLnpg5tWSE_SC2hRYBgp5SBwRHq63EBqGyYXYx";
 
 		$.ajax({		
@@ -57,6 +57,7 @@
 				// Adds Restaurant Price Rating
 				$("#randomRestaurantPrice").text(result.businesses[index].price)
 				// Adds Restaurant photo
+				$("#restaurantPhoto").text("")
 				var img= $('<img>');
 				img.attr('src', result.businesses[index].image_url)
 				img.appendTo('#restaurantPhoto')
@@ -66,6 +67,7 @@
 				// Adds Restaurant Price Rating
 				$("#randomRestaurantPrice2").text(result.businesses[index2].price)
 				// Adds Restaurant photo
+				$("#restaurantPhoto2").text("")
 				var img= $('<img>');
 				img.attr('src', result.businesses[index2].image_url)
 				img.appendTo('#restaurantPhoto2')
@@ -75,6 +77,7 @@
 				// Adds Restaurant Price Rating
 				$("#randomRestaurantPrice3").text(result.businesses[index3].price)
 				// Adds Restaurant photo
+				$("#restaurantPhoto3").text("")
 				var img= $('<img>');
 				img.attr('src', result.businesses[index3].image_url)
 				img.appendTo('#restaurantPhoto3')
