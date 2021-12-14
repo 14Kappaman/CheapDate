@@ -26,6 +26,8 @@
 
 		// TODO:BUG: When selecting "Find Cheap Date" Button repeatedly using the same CITY and DISTANCE. It loads photos multiple times.
 
+		// TODO: Get Geolocation data from cheapDateSearch() data. --> City <--
+
 	
 		var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
 		var apiKey = "ylTgS_8g2vr6yKMeND8qD6hLtZ5IcznWaYieqPh1NwhXb1WkHQzBwRzcBxmmpKxtJV48JHKfBQrme82TGo--56mAy_HLnpg5tWSE_SC2hRYBgp5SBwRHq63EBqGyYXYx";
@@ -82,53 +84,30 @@
 		});
 	});
 
-	// MovieGlu API
-	var moviegluAPI = "https://api-gate2.movieglu.com/filmsNowShowing/?n=10"
-	$.ajax({
-		url: moviegluAPI,
-		method: "GET",
-		headers: {			
+	
+	// Movieglu API
+		var moviegluAPI = {
+			"url": "https://api-gate2.movieglu.com/filmsNowShowing/?n=10",
+			"method": "GET",
+			"timeout": 0,
+			"headers": {
 			"api-version": "v200",
-			"Authorization": 'Basic Q0hFQV8wOkRmWmc2a0dHbDA3YQ==',
-			"client": "CHEA_0",
-			"x-api-key": "NlDOeoEgK946kGiNMjKqM48xopku2zY37rp0zPWn",
+			"Authorization": "Basic U1RVRF8yMDBfWFg6SzhVSXhFd2RzemE3",
+			"client": "ABCD",
+			"x-api-key": "442fMZwvtv6GMsV1Xv9mG76drGe0sZy410goEA20",
 			"device-datetime": `${timeISO8601}`,
-			"territory": "US",
-		},
-		dataType: "json",
-		data: {
-			location: city.value,
+			"territory": "XX",
+			"geolocation": "-22.0;14.0 (Recommended location, note initial minus character)"
+			},
+			};
+			
+			$.ajax(moviegluAPI).done(function (response) {
+			console.log(response);
+			});
 
-
-		},
-		success: function(result){
-			console.log(result.cinemaDetails)
-		}
-
-
-	});
-
+	// Google Maps API 
+	// googleMapsURL="https://maps.googleapis.com/maps/api/js?AIzaSyB1XdVLrKYTGM1slYJeOrgXz7p5JmpMRS0&callback=initMap"
+	
 
 
 // })
-
-
-
-// var settings = {
-// 	"url": "https://api-gate2.movieglu.com/filmsNowShowing/?n=10",
-// 	"method": "GET",
-// 	"headers": { 
-// 	"api-version": "v200",
-// 	"Authorization": "Basic Q0hFQV8wOkRmWmc2a0dHbDA3YQ==",
-// 	"client": "CHEA_0",
-// 	"location": "new york",
-// 	"terms": "theatre",
-// 	"x-api-key": "NlDOeoEgK946kGiNMjKqM48xopku2zY37rp0zPWn",
-// 	"device-datetime": "2021-12-11T19:35:52Z",
-// 	"territory": "US",
-// 	},
-// 	};
-	
-// 	$.ajax(settings).done(function (response) {
-// 	console.log(response);
-// 	});
