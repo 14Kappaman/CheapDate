@@ -135,3 +135,14 @@
 // 	$.ajax(settings).done(function (response) {
 // 	console.log(response);
 // 	});
+const minDistance = 10;
+const maxDistance = 1000;
+$("#distance").on("focusout", () => {
+	let value = $("#distance").val();
+	if (value > maxDistance){
+		$("#distance").val(maxDistance)
+	}
+	if (value < minDistance){
+		$("#distance").val(minDistance)
+	}
+})
