@@ -64,11 +64,9 @@ SO THAT users can view their best performing CheapDate Ideas._
 
 ## Links to Deployed App & GitHub Repo
 <!-- insert links here -->
-- DEPLOYED: https://kovaceva11.github.io/CheapDate
+- DEPLOYED: https://kovaceva11.github.io/CheapDate/
 - REPOSITORY: https://github.com/Kovaceva11/CheapDate
 
-
-## API Information:
 Api Keys
 Yelp: Client ID
 dEyl7xSBkAUmE4oa8rQH-A
