@@ -29,7 +29,7 @@
 		// TODO: Get Geolocation data from cheapDateSearch() data. --> City <--
 
 	
-		var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
+		var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
 		var apiKey = "ylTgS_8g2vr6yKMeND8qD6hLtZ5IcznWaYieqPh1NwhXb1WkHQzBwRzcBxmmpKxtJV48JHKfBQrme82TGo--56mAy_HLnpg5tWSE_SC2hRYBgp5SBwRHq63EBqGyYXYx";
 
 		$.ajax({		
@@ -50,6 +50,14 @@
 				console.log(index);
 				var index2 = Math.floor(Math.random() * yelpBusinesses.length)
 				var index3 = Math.floor(Math.random() * yelpBusinesses.length)
+				if (index2 === index){
+                    index2=Math.floor(Math.random()*yelpBusinesses.length)
+                };
+                var index3 = Math.floor(Math.random()*yelpBusinesses.length);
+                console.log(yelpBusinesses[index3]);
+                if (index3 === index2 || index3 === index){
+                    index3=Math.floor(Math.random()*yelpBusinesses.length)
+                }
 				// for (var i = 0; i < yelpBusinesses.length; i++) {
 				// 	console.log(yelpBusinesses[i]);
 				// }
@@ -95,22 +103,42 @@
 	
 	// Movieglu API
 		var moviegluAPI = {
-			"url": "https://api-gate2.movieglu.com/filmsNowShowing/?n=10",
+			"url": "https://api-gate2.movieglu.com/cinemasNearby/?n=5",
 			"method": "GET",
 			"timeout": 0,
 			"headers": {
-			"api-version": "v200",
-			"Authorization": "Basic U1RVRF8yMDBfWFg6SzhVSXhFd2RzemE3",
-			"client": "ABCD",
-			"x-api-key": "442fMZwvtv6GMsV1Xv9mG76drGe0sZy410goEA20",
-			"device-datetime": `${timeISO8601}`,
-			"territory": "XX",
-			"geolocation": "-22.0;14.0 (Recommended location, note initial minus character)"
+				"api-version": "v200",
+				"Authorization": "Basic U1RVRF8yMDA6UWJCVlRMcGRpVzFL",
+				"client": "STUD_200",
+				"x-api-key": "kmDHO9Q5OMgS8e899aU1e7lxGwyrk26rxGPBn7i0",
+				"device-datetime": `${timeISO8601}`,
+				"territory": "US",
+				"geolocation": "33.753746; -84.386330"
 			},
 			};
 			
 			$.ajax(moviegluAPI).done(function (response) {
-			console.log(response);
+                console.log(response);
+                var movieList = response.cinemas;
+                var index = Math.floor(Math.random()*movieList.length);
+                console.log(movieList[index]);
+                var index2 = Math.floor(Math.random()*movieList.length);
+                console.log(movieList[index2]);
+                if (index2 === index){
+                    index2=Math.floor(Math.random()*movieList.length)
+                };
+                var index3 = Math.floor(Math.random()*movieList.length);
+                console.log(movieList[index3]);
+                if (index3 === index2 || index3 === index){
+                    index3=Math.floor(Math.random()*movieList.length)
+                }
+
+                var  movie1TitleSection = $("#movie1");
+                movie1TitleSection.text(movieList[index].cinema_name)
+                var  movie1TitleSection2 = $("#movie2");
+                movie1TitleSection2.text(movieList[index2].cinema_name)
+                var  movie1TitleSection3 = $("#movie3");
+                movie1TitleSection3.text(movieList[index3].cinema_name)
 			});
 
 	// Google Maps API 
@@ -118,26 +146,9 @@
 	
 
 
-// var settings = {
-// 	"url": "https://api-gate2.movieglu.com/filmsNowShowing/?n=10",
-// 	"method": "GET",
-// 	"headers": { 
-// 	"api-version": "v200",
-// 	"Authorization": "Basic Q0hFQV8wOkRmWmc2a0dHbDA3YQ==",
-// 	"client": "CHEA_0",
-// 	"location": "new york",
-// 	"terms": "theatre",
-// 	"x-api-key": "NlDOeoEgK946kGiNMjKqM48xopku2zY37rp0zPWn",
-// 	"device-datetime": "2021-12-11T19:35:52Z",
-// 	"territory": "US",
-// 	},
-// 	};
-	
-// 	$.ajax(settings).done(function (response) {
-// 	console.log(response);
-// 	});
+
 const minDistance = 10;
-const maxDistance = 1000;
+const maxDistance = 40000;
 $("#distance").on("focusout", () => {
 	let value = $("#distance").val();
 	if (value > maxDistance){
