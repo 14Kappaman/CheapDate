@@ -1,7 +1,6 @@
 # Introducing: CheapDate
->"Not Cute. But Cheap."
+"Not Cute. But Cheap."
 
-<!-- Insert Link To Deployed Application HERE -->
 ## Welcome Thirsty Thrifty Singles, 
 
 CheapDate is the premier dating application for penny-pinching lovers. CheapDate is an innovative and revolutionary social media & dating application. Designed for the budget minded bachelor or bachelorette.  Generating the most fruitful, first-date ideas for even the most frugal lovers.
@@ -47,18 +46,25 @@ SO THAT users can view their best performing CheapDate Ideas._
 - CSS
 - Bulma CSS Framework
 - Javascript + JQuery
-- Yelp! or TripAdvisor API
-- Fandango or NewYorkTimes API
-- Google Maps API (?)
+- Yelp! API
+- Movieglu API
+- Ticket Master API
 
 ## Screenshots & Demo
 ![CheapDateScreenShot](./assets/images/CheapDateScreen2.png)
 ## Directions for Future Development
-<!-- insert Content here -->
-> Insert Future Development Description & Feature List HERE. 
+For future implementations, we would like to add other APIs to our application to create more date options in our database. For example, a combination of dinner and an event chosen from a Groupon api, or a pop up bar event combined with
+a concert gathered from the Livenation api. Maybe even include an option to add ridesharing to that event.
+We would also like to implement more specific search parameters to make for a much more personal user experience. 
+Eventually, we would like to add mobile access to our application, creating a touch and swiping mechanism for ease of use.
+
+We want the user able to not only choose between different date options but swipe through different personalized profiles that other frugal-minded people have created.
+
+We want to get to a point where we can match people that have chosen similar filters on their date profiles. For example: if I want to go to a concert or an event, I can just open my app and swipe to see if anybody is interested in going
+to that concert with me, and perhaps add a dinner option prior to that event without the need to open any other apps. 
 
 ## Credits
-<!-- insert Credits & Links here -->
+
 Yelp API: Gets data for recommended restaurants based on user's location input.
 https://www.yelp.com/developers/documentation/v3/get_started
 
@@ -73,16 +79,17 @@ https://developer.ticketmaster.com/
 
 
 ## Links to Deployed App & GitHub Repo
-<!-- insert links here -->
 - DEPLOYED: https://kovaceva11.github.io/CheapDate/
 - REPOSITORY: https://github.com/Kovaceva11/CheapDate
 
-<!-- Api Keys
+<!-- Api Keys **DELETE ALL OCCURRENCES AFTER GRADES ARE RECEIVED!**
+
 Yelp: Client ID
 dEyl7xSBkAUmE4oa8rQH-A
 
 API Key
 68bbHwsCWL4OAYGtkSOWSf2JFp7C2zbjnUxztytfSKJmA2cddY0ahKSeO6agzuI9Bf-nC3XII8n1qIPAZQHdrjzu0E4xiPcvWUINsr7NZ5xZgPiBiSbc6HfMUwmwYXYx -->
+
 <!-- API for ticketmaster.
   ticketMaster_APIkey = "8njJQoW0vprJ4q925GfuaN5cdSBvPiGT";
   ticketMasterSecret = "fvGGPygkGqrdUC6y"; -->
