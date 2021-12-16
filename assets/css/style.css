@@ -143,4 +143,12 @@ body {
 }
 .image {
   overflow: hidden;
+  width: 128px !important;
+  height: 128px !important;
+}
+
+/* star rating */
+.rating__star {
+  cursor: pointer;
+  color: orange;
 }
