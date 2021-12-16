@@ -114,7 +114,7 @@ $("#success").on("click", function (event) {
         $("#randomEventName2").clone().appendTo("#randomEventNameClone2");
       });
 
-      $("#buttonClick2").on("click", function (event) {
+      $("#buttonClick3").on("click", function (event) {
         event.preventDefault();
         console.log("clicked");
         $("#randomRestaurant3").clone().appendTo("#randomRestaurantClone3");
