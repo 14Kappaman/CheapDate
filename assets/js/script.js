@@ -1,10 +1,11 @@
+// moment api for time in ISO format. Required for Movieglu API.
 var timeISO8601 = moment().format();
 console.log(timeISO8601);
 
-// search field
+// On click function for "Find Cheap Dates" button.
 $("#success").on("click", function (event) {
   event.preventDefault();
-  // the below function needs to notify user they must select a city and range.
+  // the below function provides users ability to input City and Distance to filter CheapDate Ideas..
   function cheapDateSearch() {
     $(".input").each(function () {
       var city = $("#city").val();
@@ -14,7 +15,6 @@ $("#success").on("click", function (event) {
     });
   }
   console.log(localStorage.getItem("radius", distance));
-  // execute function on click
   cheapDateSearch();
 
   // Yelp API Information. Chooses restaurant by random.
@@ -69,11 +69,11 @@ $("#success").on("click", function (event) {
         .text("")
         .append(renderRatingView(result.businesses[index].rating));
 
-      // Adds Restaurant Name
+      // Adds Second Restaurant Name
       $("#randomRestaurant2").text(result.businesses[index2].name);
-      // Adds Restaurant Price Rating
+      // Adds Second Restaurant Price Rating
       $("#randomRestaurantPrice2").text(result.businesses[index2].price);
-      // Adds Restaurant photo
+      // Adds Second Restaurant photo
       $("#restaurantPhoto2").text("");
       var img = $("<img>").height(100).width(100);
       img.attr("src", result.businesses[index2].image_url);
@@ -82,11 +82,11 @@ $("#success").on("click", function (event) {
         .text("")
         .append(renderRatingView(result.businesses[index2].rating));
 
-      // Adds Restaurant Name
+      // Adds Third Restaurant Name
       $("#randomRestaurant3").text(result.businesses[index3].name);
-      // Adds Restaurant Price Rating
+      // Adds Third Restaurant Price Rating
       $("#randomRestaurantPrice3").text(result.businesses[index3].price);
-      // Adds Restaurant photo
+      // Adds Third Restaurant photo
       $("#restaurantPhoto3").text("");
       var img = $("<img>").height(100).width(100);
       img.attr("src", result.businesses[index3].image_url);
@@ -95,6 +95,7 @@ $("#success").on("click", function (event) {
         .text("")
         .append(renderRatingView(result.businesses[index3].rating));
 
+      // Button click events to append user's saved date ideas to their feed.
       $("#buttonClick1").on("click", function (event) {
         event.preventDefault();
         console.log("clicked");
@@ -124,7 +125,7 @@ $("#success").on("click", function (event) {
     },
   });
 
-  // Movieglu API
+  // Movieglu API. Get randomized local movie theatres. 
   var moviegluAPI = {
     url: "https://api-gate2.movieglu.com/cinemasNearby/?n=5",
     method: "GET",
@@ -176,7 +177,7 @@ $("#success").on("click", function (event) {
     img.appendTo("#movielogo3");
   });
 
-  // Ajax API call for ticketmaster.
+  // Ajax API call for ticketmaster. Get randomized local events. 
   var ticketMaster_APIkey = "8njJQoW0vprJ4q925GfuaN5cdSBvPiGT";
   var ticketMasterSecret = "fvGGPygkGqrdUC6y";
 
@@ -234,6 +235,7 @@ $("#success").on("click", function (event) {
   });
 });
 
+// Star Rating Selectors. 
 const ratingStars = [...document.getElementsByClassName("rating-star")];
 
 function starField(stars) {
