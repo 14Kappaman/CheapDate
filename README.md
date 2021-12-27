@@ -100,17 +100,5 @@ SOFTWARE.
 
 
 ## Links to Deployed App & GitHub Repo
-- DEPLOYED: https://kovaceva11.github.io/CheapDate/
-- REPOSITORY: https://github.com/Kovaceva11/CheapDate
-
-<!-- Api Keys **DELETE ALL OCCURRENCES AFTER GRADES ARE RECEIVED!**
-
-Yelp: Client ID
-dEyl7xSBkAUmE4oa8rQH-A
-
-API Key
-68bbHwsCWL4OAYGtkSOWSf2JFp7C2zbjnUxztytfSKJmA2cddY0ahKSeO6agzuI9Bf-nC3XII8n1qIPAZQHdrjzu0E4xiPcvWUINsr7NZ5xZgPiBiSbc6HfMUwmwYXYx -->
-
-<!-- API for ticketmaster.
-  ticketMaster_APIkey = "8njJQoW0vprJ4q925GfuaN5cdSBvPiGT";
-  ticketMasterSecret = "fvGGPygkGqrdUC6y"; -->
+https://14kappaman.github.io/CheapDate/
+https://github.com/14Kappaman/CheapDate
